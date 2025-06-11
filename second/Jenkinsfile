@@ -1,17 +1,18 @@
 @Library('first-library') _ 
 pipeline {
     agent any
+    
     stages {
-        stage('print hello') {
+        stage('echo') {
             steps {
                 script {
                     sh """
-                    echo "hell in a cell"
+                    echo "This is the second shared library"
                     """
                 }
             }
         }
-        stage('library') {
+        stage('second library') {
             steps {
                 firtstFunction()
             }

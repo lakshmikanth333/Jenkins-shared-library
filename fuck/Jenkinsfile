@@ -14,7 +14,7 @@ pipeline {
         }
         stage('second library') {
             steps {
-                firtstFunction()
+                pythonLibrary()
             }
         }
     }

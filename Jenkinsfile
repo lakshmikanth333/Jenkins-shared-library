@@ -19,7 +19,7 @@ pipeline {
         }
         stage('trigger') {
             steps {
-                build job: second
+                build job: 'second'
             }
         }
     }

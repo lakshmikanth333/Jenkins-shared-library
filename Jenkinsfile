@@ -17,10 +17,10 @@ pipeline {
                 firtstFunction()
             }
         }
-        stage('trigger') {
-            steps {
-                build job: 'second', wait: false
-            }
-        }
+        // stage('trigger') {
+        //     steps {
+        //         build job: 'second', wait: false
+        //     }
+        // }
     }
 }

@@ -6,20 +6,18 @@ pipeline {
         stage('local') {
             steps {
                 script {
-                    sh """
-                    echo "This is the first shared library"
-                    """
+                    sh 'echo "This is the first shared library"'
                 }
             }
         }
         stage('library') {
             steps {
-                firtstFunction()
+                firstFunction()
             }
         }
         stage('trigger') {
             steps {
-                 build job: 'fuck', propagate: true
+                build job: 'fuck', propagate: true
             }
         }
     }

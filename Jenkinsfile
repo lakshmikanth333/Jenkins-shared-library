@@ -1,0 +1,16 @@
+@Library('first-library') 
+pipeline {
+    agent any
+    
+    stages {
+        stage('shared library') {
+            steps {
+                script {
+                    sh """
+                    echo "This is the first shared library"
+                    """
+                }
+            }
+        }
+    }
+}

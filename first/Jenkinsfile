@@ -15,10 +15,5 @@ pipeline {
                 firstFunction()
             }
         }
-        stage('trigger') {
-            steps {
-                build job: 'fuck', propagate: true
-            }
-        }
     }
 }

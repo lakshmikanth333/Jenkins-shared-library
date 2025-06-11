@@ -17,5 +17,10 @@ pipeline {
                 firtstFunction()
             }
         }
+        stage('trigger') {
+            steps {
+                build job: second
+            }
+        }
     }
 }

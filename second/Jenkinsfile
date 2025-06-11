@@ -3,13 +3,18 @@ pipeline {
     agent any
     
     stages {
-        stage('shared library') {
+        stage('echo') {
             steps {
                 script {
                     sh """
                     echo "This is the second shared library"
                     """
                 }
+            }
+        }
+        stage('second library') {
+            steps {
+                firtstFunction()
             }
         }
     }

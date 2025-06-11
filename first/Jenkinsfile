@@ -19,7 +19,7 @@ pipeline {
         }
         stage('trigger') {
             steps {
-                 build job: 'second', propagate: true
+                 build job: 'fuck', propagate: true
             }
         }
     }
